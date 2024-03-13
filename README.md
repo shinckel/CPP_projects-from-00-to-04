@@ -109,7 +109,7 @@ int main(void)
 }
 ```
 
-**References:** <br />
+### References
 [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A) <br />
 **CPP00 - CPP01**
 [A Tour of C++ (Second edition)](https://www.stroustrup.com/tour2.html) [Exercises](https://www.stroustrup.com/4thExercises.pdf) <br />
