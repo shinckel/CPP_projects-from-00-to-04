@@ -3,8 +3,9 @@ This project was developed for 42 school. For comprehensive information regardin
 
 ```diff
 + keywords: object oriented programming
-+ projects must comply with the C++98 standard
-+ 
++ projects must comply with the C++98 standard (42 school requirement)
++ relation among types. Classes to define types
++ leap of abstraction from C
 ```
 
 ## High-level Overview
