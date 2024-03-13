@@ -21,6 +21,7 @@ This project was developed for 42 school. For comprehensive information regardin
 3. C++ module 03
 4. C++ module 04
 
+### Sketch code
 ```c++
 #include <iostream>
 #include <string>
@@ -111,7 +112,7 @@ int main(void)
 **References:** <br />
 [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A) <br />
 **CPP00 - CPP01**
-[A Tour of C++ (Second edition)](https://www.stroustrup.com/tour2.html) [Exercises](https://www.stroustrup.com/4thExercises.pdf)
+[A Tour of C++ (Second edition)](https://www.stroustrup.com/tour2.html) [Exercises](https://www.stroustrup.com/4thExercises.pdf) <br />
 **CPP02** <br />
 [Ep 018: Introduction to Floating-Point Binary and IEEE-754 Notation](https://www.youtube.com/watch?v=bFLchKMm6YA) <br />
 [Understanding and Using Floating Point Numbers](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html) <br />
