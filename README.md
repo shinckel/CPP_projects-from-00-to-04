@@ -5,7 +5,7 @@ This project was developed for 42 school. For comprehensive information regardin
 + keywords: object oriented programming
 + projects must comply with the C++98 standard (42 school requirement)
 + relation among types. Classes to define types
-+ leap of abstraction from C
++ leap of abstraction from C - compact type performance code
 ```
 
 ## High-level Overview
@@ -110,7 +110,9 @@ int main(void)
 
 **References:** <br />
 [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A) <br />
-**C02** <br />
+**CPP00 - CPP01**
+[A Tour of C++ (Second edition)](https://www.stroustrup.com/tour2.html) [Exercises](https://www.stroustrup.com/4thExercises.pdf)
+**CPP02** <br />
 [Ep 018: Introduction to Floating-Point Binary and IEEE-754 Notation](https://www.youtube.com/watch?v=bFLchKMm6YA) <br />
 [Understanding and Using Floating Point Numbers](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html) <br />
 [Floating point number representation](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_representation.html) <br />
