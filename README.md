@@ -109,6 +109,7 @@ int main(void)
 ```
 
 **References:** <br />
+[Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A) <br />
 **C02** <br />
 [Ep 018: Introduction to Floating-Point Binary and IEEE-754 Notation](https://www.youtube.com/watch?v=bFLchKMm6YA) <br />
 [Understanding and Using Floating Point Numbers](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html) <br />
@@ -123,7 +124,6 @@ int main(void)
 |:----|:-----:|:--------|
 | **class** | `class Person{ std::string first; std::string last; void printFullName(){ std::cout << first " " << last << std::endl } };` | A class is a blueprint for creating objects. It defines the data and behavior of a type. Classes are used to define types. You can get your own types, apppropiate to your problem. |
 | **object** | `Person person;` | An object is an instance of a class. It's created from the class blueprint. |
-| **instance** | | Another name for object. |
 | **instantiating** | | Creating an object for a class. |
 | **data members** | `std::string first;` `std::string last;` | Data members are variables that hold the state of an object. |
 | **methods** | `void printFullName() { std::cout << first << " " << last << std::endl;}` | Methods are functions that define the behavior of an object. |
