@@ -111,7 +111,7 @@ int main(void)
 
 ### References
 [Bjarne Stroustrup: C++ | Lex Fridman Podcast #48](https://www.youtube.com/watch?v=uTxRF5ag27A) <br />
-**CPP00 - CPP01**
+**CPP00 - CPP01** <br />
 [A Tour of C++ (Second edition)](https://www.stroustrup.com/tour2.html) [Exercises](https://www.stroustrup.com/4thExercises.pdf) <br />
 **CPP02** <br />
 [Ep 018: Introduction to Floating-Point Binary and IEEE-754 Notation](https://www.youtube.com/watch?v=bFLchKMm6YA) <br />
