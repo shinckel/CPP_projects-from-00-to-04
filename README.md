@@ -4,8 +4,8 @@ This project was developed for 42 school. For comprehensive information regardin
 ```diff
 + keywords: object oriented programming
 + projects must comply with the C++98 standard (42 school requirement)
-+ relation among types. Classes to define types
-+ leap of abstraction from C - compact type performance code
++ relation among types. Classes to define types (user-defined types, classes and enumerations)
++ C++ augments the built-in types and operations with a set of abstraction mechanisms (leap of abstraction from C - compact type performance code)
 ```
 
 ## High-level Overview
@@ -125,7 +125,7 @@ int main(void)
 
 | Task | Prototype | Description |
 |:----|:-----:|:--------|
-| **class** | `class Person{ std::string first; std::string last; void printFullName(){ std::cout << first " " << last << std::endl } };` | A class is a blueprint for creating objects. It defines the data and behavior of a type. Classes are used to define types. You can get your own types, apppropiate to your problem. |
+| **class** | `class Person{ std::string first; std::string last; void printFullName(){ std::cout << first " " << last << std::endl } };` | A class is a blueprint for creating objects. It defines the data and behavior of a type. Classes are used to define types. You can get your own types, apppropiate to your problem. It has a set of **members**, which can be data, function, or type members. |
 | **object** | `Person person;` | An object is an instance of a class. It's created from the class blueprint. |
 | **instantiating** | | Creating an object for a class. |
 | **data members** | `std::string first;` `std::string last;` | Data members are variables that hold the state of an object. |
@@ -151,6 +151,20 @@ int main(void)
 | **Shifting** | ` fixed<w,b>` | The bit pattern of 53 and 26.5 is exactly the same. The only difference, is the position of binary point. To define a fixed point type conceptually, all we need are two parameters: width of the number representation and binary point position within the number (count from least significant bit, counting from zero). E.g. `fixed<8,3>` denotes a 8-bit fixed point number, of which 3 right most bits are fractional. <img width="987" alt="Screenshot 2024-03-10 at 19 25 25" src="https://github.com/lets-cpp/Parent/assets/115558344/f0081aa1-d897-43cb-881c-5c05f76fd614"> <img width="952" alt="Screenshot 2024-03-10 at 19 29 08" src="https://github.com/lets-cpp/Parent/assets/115558344/125a5743-3d28-4f54-b0d8-b08c59f7f622"> |
 | | | integers -> divide number by two and use the remainder for binary conversion. Floating fractional part -> multiply it by two and use the int num for binary conversion. in other words we will extract the integer part by dividing in 2, and we extract the decimal part by multiplying the number by 2. |
 | **input and output** | `cin (standard input, capture user input)` `cout (standard output)` `cerr (standard error)` `clog (general information)` `types of istream / ostream objects` | Compiler doesn't know how to convert a Fixed object to a type that can be outputted to a stream (like `std::cout`). Stream -> sequence of characters read from or written to an IO device. `std::` standard library and scope operator. `<<` output operator. `std::endl` manipulator (stream, taking control to the next line). |
+| **free store** | `dynamic memory and heap` | Objects allocated on the free store are independent of the scope from which they are created and "live" until they are destroyed using the delete operator. |
+
+### Reference from A Tour of C++ (Stroustrup, 2023)
+```c++
+class Vector {
+public:
+  Vector(int s) :elem{new double[s]}, sz{s} {} // construct a vector
+  double& operator[](int i) {return elem[i];} // element access: subscripting
+  int size() {return sz;}
+private:
+  double* elem; // pointer to the elements
+  int sz; // the number of elements 
+}
+```
 
 ```c
 // Printing floating point numbers
