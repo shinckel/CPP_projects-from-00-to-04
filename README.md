@@ -153,7 +153,7 @@ int main(void)
 | **input and output** | `cin (standard input, capture user input)` `cout (standard output)` `cerr (standard error)` `clog (general information)` `types of istream / ostream objects` | Compiler doesn't know how to convert a Fixed object to a type that can be outputted to a stream (like `std::cout`). Stream -> sequence of characters read from or written to an IO device. `std::` standard library and scope operator. `<<` output operator. `std::endl` manipulator (stream, taking control to the next line). |
 | **free store** | `dynamic memory and heap` | Objects allocated on the free store are independent of the scope from which they are created and "live" until they are destroyed using the delete operator. |
 
-### Reference from A Tour of C++ (Stroustrup, 2023)
+### References from A Tour of C++ (Stroustrup, 2023)
 ```c++
 class Vector {
 public:
@@ -165,9 +165,8 @@ private:
   int sz; // the number of elements 
 }
 ```
-
+### Reference Printing floating point numbers
 ```c
-// Printing floating point numbers
 #include <ieee754.h>
 #define LOG2_10 3.321928095
  
