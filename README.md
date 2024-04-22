@@ -152,6 +152,7 @@ int main(void)
 | | | integers -> divide number by two and use the remainder for binary conversion. Floating fractional part -> multiply it by two and use the int num for binary conversion. in other words we will extract the integer part by dividing in 2, and we extract the decimal part by multiplying the number by 2. |
 | **input and output** | `cin (standard input, capture user input)` `cout (standard output)` `cerr (standard error)` `clog (general information)` `types of istream / ostream objects` | Compiler doesn't know how to convert a Fixed object to a type that can be outputted to a stream (like `std::cout`). Stream -> sequence of characters read from or written to an IO device. `std::` standard library and scope operator. `<<` output operator. `std::endl` manipulator (stream, taking control to the next line). |
 | **free store** | `dynamic memory and heap` | Objects allocated on the free store are independent of the scope from which they are created and "live" until they are destroyed using the delete operator. |
+| **operator overloads** | `class Matrix { Matrix& operator=(const Matrix& a); }` | We can define operators for user-defined types (classes and enumerations). An operator can be defined as member functions. |
 
 ### References from A Tour of C++ (Stroustrup, 2023)
 ```c++
