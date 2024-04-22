@@ -234,20 +234,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
    multipass delete my-vm
    ```
 6. Create a SSH connection
-- Access the virtual machine
-- Install SSH Server (if not installed): Ensure that SSH server is installed on your virtual machine. On Ubuntu, you can install it with:
-  ```bash
-  sudo apt update
-  sudo apt install openssh-server
-  ```
-- Check SSH Service Status: Verify that SSH service is running on the virtual machine:
-  ```bash
-  sudo systemctl status ssh
-  ```
-  <img width="563" alt="Screenshot 2024-04-22 at 11 52 49" src="https://github.com/shinckel/CPP_projects-from-00-to-04/assets/115558344/972b9e2d-ae23-49c5-953f-b6f2c2e8b70f">
-- Find Virtual Machine IP Address: Determine the IP address of your virtual machine: `multipass list` -> 192.168.64.17
-- Generate SSH keys to authenticate communication between the VM and host `ssh-keygen -t rsa` -> host machine
-- To speed up the process of linking the new  instance with the SSH key from the previous step, we will use a little bit of cloud-init -> Copy and paste the below text into a file called vscode.yaml. Replace <public key> with the key found in id_rsa.pub, generated in an earlier step
+- To speed up the process of linking the new instance with the SSH key from the previous step, we will use a little bit of cloud-init -> Copy and paste the below text into a file called vscode.yaml. Replace <public key> with the key found in id_rsa.pub, generated in an earlier step
   ```bash
     groups:
     - vscode
@@ -260,6 +247,18 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
   ```bash
     multipass launch --cloud-init vscode.yaml
   ```
+- Install SSH Server (if not installed): Ensure that SSH server is installed on your virtual machine. On Ubuntu, you can install it with:
+  ```bash
+  sudo apt update
+  sudo apt install openssh-server
+  ```
+- Check SSH Service Status: Verify that SSH service is running on the virtual machine:
+  ```bash
+  sudo systemctl status ssh
+  ```
+  <img width="563" alt="Screenshot 2024-04-22 at 11 52 49" src="https://github.com/shinckel/CPP_projects-from-00-to-04/assets/115558344/972b9e2d-ae23-49c5-953f-b6f2c2e8b70f">
+- Determine the IP address of your virtual machine: `multipass list` -> 192.168.64.17
+- Generate SSH keys to authenticate communication between the VM and host `ssh-keygen -t rsa` -> host machine
 - Download VSCode extension `Remote - SSH`
 - In VSCode, click on `Open a Remote Window` -> Connect to Host -> Add New SSH Host... -> ssh ubuntu@192.168.64.17
 - It will generate a new entry in config file
@@ -278,7 +277,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
     IdentityFile /Users/hincksof/ubuntu_config/.ssh/id_rsa
   ```
 - At this point, VSCode will ask you for the location of your SSH keys. The default location should be in a hidden directory named “.ssh” in the home directory.
+- ` IdentityFile` is the place where it is stored the public key generated previously in yout host machine ->  `ssh-keygen -t rsa`
 
 ### References
 [Using Multipass with vscode](https://discourse.ubuntu.com/t/using-multipass-with-vscode/34905)
-
