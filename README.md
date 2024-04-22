@@ -234,8 +234,35 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
    multipass delete my-vm
    ```
 6. Create a SSH connection
+- Access the virtual machine
+- Install SSH Server (if not installed): Ensure that SSH server is installed on your virtual machine. On Ubuntu, you can install it with:
+  ```bash
+  sudo apt update
+  sudo apt install openssh-server
+  ```
+- Check SSH Service Status: Verify that SSH service is running on the virtual machine:
+  ```bash
+  sudo systemctl status ssh
+  ```
+  <img width="563" alt="Screenshot 2024-04-22 at 11 52 49" src="https://github.com/shinckel/CPP_projects-from-00-to-04/assets/115558344/972b9e2d-ae23-49c5-953f-b6f2c2e8b70f">
+- Find Virtual Machine IP Address: Determine the IP address of your virtual machine: `multipass list` -> 192.168.64.17
 - Download VSCode extension `Remote - SSH`
-- 
+- In VSCode, click on `Open a Remote Window` -> Connect to Host -> Add New SSH Host... -> ssh ubuntu@192.168.64.17
+- It will generate a new entry in config file
+  ```bash
+  Include /Users/hincksof/.colima/ssh_config
+
+  Host 192.168.64.17
+    HostName 192.168.64.17
+    User ubuntu
+    IdentityFile /Users/hincksof/ubuntu_config/.ssh/id_rsa
+
+
+  Host 192.168.64.13
+    HostName 192.168.64.13
+    User ubuntu
+    IdentityFile /Users/hincksof/ubuntu_config/.ssh/id_rsa
+  ```
 
 ### References
 [Using Multipass with vscode](https://discourse.ubuntu.com/t/using-multipass-with-vscode/34905)
