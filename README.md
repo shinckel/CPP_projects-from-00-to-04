@@ -209,3 +209,34 @@ void print_real(double r, int width, int dec)
 }
 ```
 
+## Create a virtual machine with Multipass
+
+To run this project on Linux from a different OS, I'm using Multipass to create a virtual machine. Follow these steps to set it up:
+1. Download or upgrade multipass with HomeBrew
+   ```bash
+   brew install multipass
+   brew upgrade multipass
+   multipass version
+   ```
+3. Launch a Virtual Machine
+- Customize your virtual machine during launch by specifying options like the Ubuntu release (--release), CPU count (--cpus), memory size (--mem), etc.
+   ```bash
+   multipass launch --name my-vm
+   ```
+4. Access the Virtual Machine
+   ```bash
+   multipass shell my-vm
+   multipass list
+   ```
+5. Stop or delete the Virtual Machine
+   ```bash
+   multipass stop my-vm
+   multipass delete my-vm
+   ```
+6. Create a SSH connection
+- Download VSCode extension `Remote - SSH`
+- 
+
+### References
+[Using Multipass with vscode](https://discourse.ubuntu.com/t/using-multipass-with-vscode/34905)
+
