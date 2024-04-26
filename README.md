@@ -15,11 +15,11 @@ This project was developed for 42 school. For comprehensive information regardin
 - When you allocate memory (by using the new keyword), you must avoid memory leaks.
 - From Module 02 to Module 09, your classes must be designed in the Orthodox Canonical Form, except when explicitely stated otherwise.
 
-0. C++ module 00
-1. C++ module 01
+0. C++ module 00 - classes, member functions, stdio streams, initialisation lists, static, const
+1. C++ module 01 - memory allocation, pointers to members, references and switch statement
 2. C++ module 02 - create a class in Orthodox Canonical Form that represents a fixed-point number
-3. C++ module 03
-4. C++ module 04
+3. C++ module 03 - inheritance
+4. C++ module 04 - subtype polymorphism, abstract classes, interface
 
 ### Sketch code
 ```c++
