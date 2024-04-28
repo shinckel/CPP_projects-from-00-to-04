@@ -6,17 +6,17 @@
 #    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/28 13:30:41 by shinckel          #+#    #+#              #
-#    Updated: 2024/04/28 14:04:07 by shinckel         ###   ########.fr        #
+#    Updated: 2024/04/28 17:31:46 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
-SRCS =	megaphone.cpp
+SRCS =	src/main.cpp \
 
 CC = c++
 
-CCFLAGS = -Wall -Werror -Wextra -std=c++98 -Iheader
+CCFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJS = $(SRCS:.cpp=.o)
 
