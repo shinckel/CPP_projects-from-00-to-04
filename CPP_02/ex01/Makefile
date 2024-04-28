@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/09 19:17:52 by shinckel          #+#    #+#              #
-#    Updated: 2024/04/22 16:24:21 by shinckel         ###   ########.fr        #
+#    Updated: 2024/04/28 17:31:38 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS =	src/main.cpp \
 
 CC = c++
 
-CCFLAGS = -Wall -Werror -Wextra -std=c++98 -Iheader
+CCFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJS = $(SRCS:.cpp=.o)
 
