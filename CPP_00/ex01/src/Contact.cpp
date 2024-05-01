@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:40:04 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/01 16:32:26 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:25:40 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ int _is_valid(std::string phone)
 Contact Contact::setContactdata() {
     Contact contact;
 
-    // std::string firstName;
-    // std::string lastName;
-    // std::string nickName;
-    // std::string phoneNumber;
-    // std::string darkestSecret;
-
     std::cout << "Enter First Name: ";
     std::getline(std::cin >> std::ws, contact.firstName);
 
@@ -60,11 +54,6 @@ Contact Contact::setContactdata() {
     std::cout << "Enter Darkest Secret: ";
     std::getline(std::cin >> std::ws, contact.darkestSecret);
 
-    // contact.firstName = firstName;
-    // contact.lastName = lastName;
-    // contact.nickName = nickName;
-    // contact.phoneNumber = phoneNumber;
-    // contact.darkestSecret = darkestSecret;
     return contact;
 }
 
