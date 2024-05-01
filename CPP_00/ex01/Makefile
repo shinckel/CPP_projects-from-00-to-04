@@ -6,13 +6,16 @@
 #    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/28 13:30:41 by shinckel          #+#    #+#              #
-#    Updated: 2024/04/28 17:31:46 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/01 16:02:29 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
 SRCS =	src/main.cpp \
+		src/Phonebook.cpp \
+		src/Contact.cpp
+
 
 CC = c++
 

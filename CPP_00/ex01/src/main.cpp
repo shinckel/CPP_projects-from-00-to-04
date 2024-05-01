@@ -6,68 +6,68 @@
 /*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:45:27 by shinckel          #+#    #+#             */
-/*   Updated: 2024/04/28 17:57:42 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:00:42 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/Phonebook.hpp"
 
-// void	searchContacts(PhoneBook phoneBook) {
-// 	Color::Modifier green(Color::FG_GREEN);
-// 	Color::Modifier def(Color::FG_DEFAULT);
+userInput   setUserInput(std::string command) {
+    if (command == "ADD")
+        return userInput::ADD;
+    else if (command == "SEARCH")
+        return userInput::SEARCH;
+    else if (command == "EXIT")
+        return userInput::EXIT;
+    else
+        return userInput::INVALID;
+}
 
-// 	if (phoneBook.getNumContacts() > 0)
-// 	{
-// 		std::cout << green << "Available contacts:" << def << std::endl;
-// 		phoneBook.displayContacts();
+void	searchContacts(PhoneBook &phoneBook) {
+	Color::Modifier green(Color::FG_GREEN);
+	Color::Modifier def(Color::FG_DEFAULT);
 
-// 		int index;
-// 		phoneBook.displaySingleContact(index);
-// 	}
-// }
+    std::cout << green << phoneBook.getNumContacts() << def << std::endl;
+	if (phoneBook.getNumContacts())
+	{
+		std::cout << green << "AVAILABLE CONTACTS:" << def << std::endl;
+		phoneBook.displayContacts();
 
-int main()
+		phoneBook.displaySingleContact();
+	}
+}
+
+void    redirectUserInput(PhoneBook &phoneBook, userInput in, Color::Modifier red, Color::Modifier def) {
+	Contact		contact;
+
+    switch (in)
+    {
+    case userInput::ADD:
+        phoneBook.addContact(contact.setContactdata());
+        break;
+    case userInput::SEARCH:
+        searchContacts(phoneBook);
+        break;
+    case userInput::INVALID:
+        std::cout << red << "INVALID COMMAND..." << def << std::endl;
+        break;
+    }
+}
+
+int main( void )
 {
     PhoneBook	phoneBook;
-	Contact		contact;
 	Color::Modifier red(Color::FG_RED);
+    Color::Modifier ylw(Color::FG_YELLOW);
     Color::Modifier def(Color::FG_DEFAULT);
 
     while (1)
     {
-        std::string command;
-        std::cout << "Please enter the command (ADD, SEARCH, EXIT): ";
-
-		if (!std::getline(std::cin, command) || command == "EXIT")
-        	return (command == "EXIT" ? (std::cout << red << "EXITING..." << def << std::endl, 1) : 1);
-		else if (command == "ADD")
-            phoneBook.addContact(contact.setContactdata());
-		// else if (command == "SEARCH")
-		// 	searchContacts(phoneBook);
-		else
-			std::cout << red << "Invalid command." << def << std::endl;
-
-
-        // else if (command == "ADD")
-        // {
-        //     Contact contact = Contact::setContactInfo();
-        //     phoneBook.addContact(contact);
-        // }
-        // else if (command == "SEARCH")
-        // {
-        //     if (phoneBook.getNumContacts() > 0)
-        //     {
-        //         std::cout << "Available contacts:" << std::endl;
-        //         phoneBook.displayContacts();
-
-        //         int index;
-        //         phoneBook.displayContact(index);
-        //     }
-        //     else
-        //         std::cout << "No contact added" << std::endl;
-        // }
-        // else
-        //     std::cout << "Invalid command." << std::endl;
+        std::string in;
+        std::cout << ylw << "Please enter the command (ADD, SEARCH, EXIT): ";
+		if (!std::getline(std::cin, in) || setUserInput(in) == userInput::EXIT )
+        	return (in == "EXIT" ? (std::cout << red << "EXITING..." << def << std::endl, 1) : 1);
+        redirectUserInput(phoneBook, setUserInput(in), red, def);
     }
     return 0;
 }

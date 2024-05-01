@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 14:03:53 by shinckel          #+#    #+#             */
-/*   Updated: 2024/04/28 17:45:51 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:33:50 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include "Colors.hpp"
 # include "Contact.hpp"
 
+enum class userInput { ADD, SEARCH, EXIT, INVALID };
+
 class PhoneBook {
 	public:
 		PhoneBook();
@@ -27,7 +29,7 @@ class PhoneBook {
 		void		addContact(const Contact& contact);
 		int			getNumContacts();
 		void		displayContacts();
-		bool		displaySingleContact(int &index);
+		void		displaySingleContact();
 		std::string	truncateString(const std::string &str);
 
 	private:

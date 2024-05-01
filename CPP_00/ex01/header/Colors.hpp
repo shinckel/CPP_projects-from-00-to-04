@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:48:19 by shinckel          #+#    #+#             */
-/*   Updated: 2024/04/28 17:24:23 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:14:53 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ namespace Color {
     enum Code {
         FG_RED      = 31,
         FG_GREEN    = 32,
+        FG_YELLOW   = 33,
         FG_BLUE     = 34,
+        FG_PURPLE   = 35,
+        FG_L_BLUE   = 36,
         FG_DEFAULT  = 39,
         BG_RED      = 41,
         BG_GREEN    = 42,
