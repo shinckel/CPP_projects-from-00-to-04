@@ -6,18 +6,9 @@
 #    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/09 19:17:52 by shinckel          #+#    #+#              #
-#    Updated: 2024/04/22 16:24:06 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/06 21:40:43 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# Use = (recursive assignment) when you want the value of the variable to be 
-# evaluated at the time of use. This is useful when the variable's value depends
-# on the values of other variables that may not be set at the time of the assignment.
-
-# Use := (simple assignment) when you want the value of the variable to be 
-# evaluated at the time of assignment. This is useful when you want to ensure that
-# the value is fixed at the time of assignment and does not depend on any variables 
-# that may change later.
 
 NAME = fixed
 
