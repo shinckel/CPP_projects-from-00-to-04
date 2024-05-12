@@ -5,15 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/28 13:30:41 by shinckel          #+#    #+#              #
-#    Updated: 2024/05/10 15:33:36 by shinckel         ###   ########.fr        #
+#    Created: 2024/05/12 15:07:55 by shinckel          #+#    #+#              #
+#    Updated: 2024/05/12 15:13:23 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = dreamjob
+NAME = zombie
 
-SRCS =	src/tests.cpp \
-		src/Account.cpp \
+SRCS =	src/Zombie.cpp \
+		src/newZombie.cpp \
+		src/ramdomChump.cpp \
+		src/main.cpp
 
 CC = c++
 
@@ -30,7 +32,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(OBJSLIB) $(OBJSPR)
 	@c++ -Wall -Werror -Wextra -std=c++98 $(OBJS) -o $(NAME)
-	@echo "$(GREEN) Ready to CPP_00-02 $(RESET)"
+	@echo "$(GREEN) Ready to CPP_00-01 $(RESET)"
 
 clean:
 	@rm -f *.o

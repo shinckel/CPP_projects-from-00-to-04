@@ -6,7 +6,7 @@
 /*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:44:58 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/01 19:23:01 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:24:11 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void    PhoneBook::displaySingleContact()
         if (!(std::cin >> index) || index == 9) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            return ; // user wants to logout
+            return ;
         }
     }
     if (index >= 0 && index < n_contacts)

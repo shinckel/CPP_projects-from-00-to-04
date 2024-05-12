@@ -153,6 +153,7 @@ int main(void)
 | **input and output** | `cin (standard input, capture user input)` `cout (standard output)` `cerr (standard error)` `clog (general information)` `types of istream / ostream objects` | Compiler doesn't know how to convert a Fixed object to a type that can be outputted to a stream (like `std::cout`). Stream -> sequence of characters read from or written to an IO device. `std::` standard library and scope operator. `<<` output operator. `std::endl` manipulator (stream, taking control to the next line). |
 | **free store** | `dynamic memory and heap` | Objects allocated on the free store are independent of the scope from which they are created and "live" until they are destroyed using the delete operator. |
 | **operator overloads** | `class Matrix { Matrix& operator=(const Matrix& a); }` | We can define operators for user-defined types (classes and enumerations). An operator can be defined as member functions. |
+| **friend** | `friend std::ostream&` | The friend declaration appears in a class body and grants a function or another class access to private and protected members of the class where the friend declaration appears. |
 
 ### References from A Tour of C++ (Stroustrup, 2023)
 ```c++
