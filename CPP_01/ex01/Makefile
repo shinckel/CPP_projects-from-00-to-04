@@ -6,15 +6,14 @@
 #    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 15:07:55 by shinckel          #+#    #+#              #
-#    Updated: 2024/05/15 11:16:14 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/15 12:15:10 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = zombiehorde
 
 SRCS =	src/Zombie.cpp \
-		src/newZombie.cpp \
-		src/ramdomChump.cpp \
+		src/zombieHorde.cpp \
 		src/main.cpp
 
 CC = c++
@@ -32,7 +31,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(OBJSLIB) $(OBJSPR)
 	@c++ -Wall -Werror -Wextra -std=c++98 $(OBJS) -o $(NAME)
-	@echo "$(GREEN) Ready to CPP_01-00 $(RESET)"
+	@echo "$(GREEN) Ready to CPP_01-01 $(RESET)"
 
 clean:
 	@rm -f *.o
