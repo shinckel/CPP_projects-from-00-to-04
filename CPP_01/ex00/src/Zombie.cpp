@@ -3,32 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:14:18 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/12 15:45:30 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/15 11:10:29 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/Zombie.hpp"
 
 Zombie::Zombie( std::string name ) : _name( name ) {
-	Color::Modifier green(Color::FG_GREEN);
-	Color::Modifier def(Color::FG_DEFAULT);
-
-	std::cout << green << "Zombie constructor called" << def << std::endl;
+	std::cout << "Zombie constructor called" << std::endl;
 }
 
 Zombie::~Zombie( void ) {
 	Color::Modifier red(Color::FG_RED);
-	Color::Modifier def(Color::FG_DEFAULT);
+  Color::Modifier def(Color::FG_DEFAULT);
 
-	std::cout << red << "Zombie destructor called" << def << std::endl;
+	std::cout << red << "Destroying " << _name << def << std::endl;
 }
 
 void	Zombie::announce( void ) {
-	Color::Modifier green(Color::FG_GREEN);
-	Color::Modifier def(Color::FG_DEFAULT);
-
-	std::cout << green << _name << ": >: BraiiiiiiinnnzzzZ..."
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
