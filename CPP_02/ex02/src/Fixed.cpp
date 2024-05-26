@@ -17,7 +17,7 @@ Fixed::Fixed() {
 }
 
 Fixed::Fixed( const Fixed& num ) {
-  fixedPointNumber = num.fixedPointNumber;
+  *this = num;
 }
 
 Fixed::Fixed(const float num) {
@@ -37,7 +37,7 @@ void  Fixed::setRawBits( int const raw ) {
 }
 
 Fixed&  Fixed::operator=(const Fixed& num) {
-  fixedPointNumber = num.getRawBits();
+  setRawBits(num.getRawBits());
   return *this;
 }
 
@@ -48,7 +48,7 @@ float Fixed::toFloat() const {
 }
 
 int Fixed::toInt() const {
-  return ((int)(roundf(fixedPointNumber >> fractional)));
+  return ((int)(roundf((float)fixedPointNumber / 256)));
 } 
 
 std::ostream  &operator<<(std::ostream &out, const Fixed& num) {
@@ -99,11 +99,13 @@ bool  Fixed::operator!=(const Fixed &b) const {
 }
 
 // Increment/decrement operators
+// prefix increment operator ++obj. Returns the modified obj
 Fixed &Fixed::operator++() {
   fixedPointNumber++;
   return(*this);
 }
 
+// posfix increment operator obj++. Returns a copy of the original object
 Fixed Fixed::operator++(int) {
   Fixed tmp;
   

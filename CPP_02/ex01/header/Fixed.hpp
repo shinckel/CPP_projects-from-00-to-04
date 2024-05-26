@@ -32,6 +32,7 @@ class Fixed {
     float             toFloat( void ) const;
     int               toInt( void ) const;
 
+
   private:
     int               fixedPointNumber;
     static const int  fractional = 8;
