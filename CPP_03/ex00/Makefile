@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/09 19:17:52 by shinckel          #+#    #+#              #
-#    Updated: 2024/05/06 21:40:53 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/27 17:46:00 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = ClapTrap
 
 SRCS =	src/main.cpp \
 		src/ClapTrap.cpp
