@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 18:56:55 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/28 18:57:01 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/28 21:10:28 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <iostream>
 # include "Brain.hpp"
 
+// abstract class -> contains at least one pure virtual function
+// pure virtual function -> it has no implementation
+// abstract classes cant instantiate
 class AAnimal
 {
 protected:
