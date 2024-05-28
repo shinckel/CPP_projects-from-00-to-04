@@ -6,41 +6,36 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 18:48:13 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/28 18:48:19 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/28 19:18:59 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/WrongAnimal.hpp"
+#include "../header/WrongCat.hpp"
 
-WrongAnimal::WrongAnimal()
+WrongCat::WrongCat()
 {
-	type = "";
-	std::cout << "WrongAnimal constructed" << std::endl;
+	type = "WrongCat";
+	std::cout << "WrongCat created" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal()
-{
-	std::cout << "WrongAnimal destructed" << std::endl;
-}
-
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copia)
+WrongCat &WrongCat::operator=(const WrongCat &copia)
 {
 	type = copia.type;
-	std::cout << "WrongAnimal copied" << std::endl;
+	std::cout << "WrongCat copied";
 	return (*this);
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &copia)
+WrongCat::WrongCat(const WrongCat &copia) : WrongAnimal()
 {
 	*this = copia;
 }
 
-void	WrongAnimal::makeSound() const
+WrongCat::~WrongCat()
 {
-	std::cout << "(generic animal sound)" << std::endl;
+	std::cout << "WrongCat destructed" << std::endl;
 }
 
-std::string WrongAnimal::getType() const
+void	WrongCat::makeSound() const
 {
-	return (type);
+	std::cout << "Meow Meow" << std::endl;
 }

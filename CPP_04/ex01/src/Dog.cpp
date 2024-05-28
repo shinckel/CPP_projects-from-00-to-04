@@ -6,11 +6,11 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 18:54:19 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/28 18:54:20 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/28 19:20:44 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "../header/Dog.hpp"
 
 Dog::Dog()
 {

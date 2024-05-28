@@ -6,11 +6,11 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 18:53:51 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/28 18:53:53 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/28 19:19:53 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "../header/Cat.hpp"
 
 Cat::Cat()
 {

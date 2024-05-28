@@ -6,12 +6,12 @@
 /*   By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 18:54:46 by shinckel          #+#    #+#             */
-/*   Updated: 2024/05/28 18:54:48 by shinckel         ###   ########.fr       */
+/*   Updated: 2024/05/28 19:20:34 by shinckel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "../header/Cat.hpp"
+#include "../header/Dog.hpp"
 
 int main()
 {
