@@ -6,7 +6,7 @@
 #    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 11:50:29 by shinckel          #+#    #+#              #
-#    Updated: 2024/05/28 18:50:31 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/28 18:51:29 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ SRCS =	src/main.cpp \
 				src/Animal.cpp \
 				src/Dog.cpp \
 				src/Cat.cpp \
-				src/WrongAnimal.cpp \
-				src/WrongCat.cpp
+				src/Brain.cpp
 
 CC = c++
 
@@ -34,7 +33,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS) $(OBJSLIB) $(OBJSPR)
 	@c++ -Wall -Werror -Wextra -std=c++98 $(OBJS) -o $(NAME)
-	@echo "$(GREEN) Ready to CPP_04-00 $(RESET)"
+	@echo "$(GREEN) Ready to CPP_04-01 $(RESET)"
 
 clean:
 	@rm -f *.o
