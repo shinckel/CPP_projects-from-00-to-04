@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shinckel <shinckel@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: shinckel <shinckel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/07 11:50:29 by shinckel          #+#    #+#              #
-#    Updated: 2024/05/28 18:50:31 by shinckel         ###   ########.fr        #
+#    Updated: 2024/05/30 17:36:12 by shinckel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ SRCS =	src/main.cpp \
 				src/WrongAnimal.cpp \
 				src/WrongCat.cpp
 
-CC = c++
+CXX = c++
 
-CCFLAGS = -Wall -Werror -Wextra -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -33,11 +33,11 @@ RESET = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJS) $(OBJSLIB) $(OBJSPR)
-	@c++ -Wall -Werror -Wextra -std=c++98 $(OBJS) -o $(NAME)
+	c++ -Wall -Werror -Wextra -std=c++98 $(OBJS) -o $(NAME)
 	@echo "$(GREEN) Ready to CPP_04-00 $(RESET)"
 
 clean:
-	@rm -f *.o
+	@rm -f $(OBJS)
 	@echo "$(RED) Remove object files $(RESET)"
 
 fclean: clean
