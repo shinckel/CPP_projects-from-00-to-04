@@ -248,6 +248,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
 - Next, open a terminal in the same location as this file, and launch a new instance referencing this cloud-init file:
   ```bash
     multipass launch --cloud-init vscode.yaml
+    multipass launch -n new-instance -d 20G --cloud-init vscode.yaml [specific name and specific size]
   ```
 - Install SSH Server (if not installed): Ensure that SSH server is installed on your virtual machine. On Ubuntu, you can install it with:
   ```bash
