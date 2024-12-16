@@ -282,7 +282,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
 - At this point, VSCode will ask you for the location of your SSH keys. The default location should be in a hidden directory named “.ssh” in the home directory.
 - ` IdentityFile` is the place where it is stored the public key generated previously in yout host machine ->  `ssh-keygen -t rsa`
 
-7. Troubleshooting
+### Troubleshooting
 `Could not establish connection to "192.168.64.18": Failed to install the VS Code Server.`
 - Check SSH Configuration: ssh user@192.168.64.18
 - Clear VS Code Server on the VM: rm -rf ~/.vscode-server
