@@ -235,6 +235,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
    ```bash
    multipass stop my-vm
    multipass delete my-vm
+   multipass purge
    ```
 6. Create a SSH connection
 - To speed up the process of linking the new instance with the SSH key from the previous step, we will use a little bit of cloud-init -> Copy and paste the below text into a file called vscode.yaml. Replace <public key> with the key found in id_rsa.pub, generated in an earlier step
