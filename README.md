@@ -229,6 +229,7 @@ To run this project on Linux from a different OS, I'm using Multipass to create 
    ```bash
    multipass shell my-vm
    multipass list
+   multipass list --format json // log list details
    ```
 5. Stop or delete the Virtual Machine
    ```bash
